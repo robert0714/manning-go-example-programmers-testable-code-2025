@@ -46,13 +46,13 @@ if diff := cmp.Diff(want, got); diff != "" {
 }
 ```
 The failure message looks like this after the test runs (and is customizable):
-```diff
+```diff 
 Parse("https://github.com/inancgumus") mismatch (-want +got):
           &url.URL{
                 Scheme: "https",
                 Host:   "github.com",
-        -       Path:  "",
-        +       Path:  "inancgumus,
+-               Path:  "",
++               Path:  "inancgumus,
           }
 ```          
 Check out the documentation at https://pkg.go.dev/github.com/google/go-cmp/cmp to learn more.
