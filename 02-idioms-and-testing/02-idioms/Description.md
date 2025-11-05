@@ -1,0 +1,3 @@
+A package’s name should concisely communicate what it offers, not what it does. The `url` package, for example, provides a way to work with URLs, so we name it `url` instead of something like `urlparser` (even though it parses only URLs for now). 
+
+Last, for clarity, it’s idiomatic to avoid stuttering when naming package items. If `Parse` were named `ParseURL`, it would stutter: `url.ParseURL`. A concise package name like `url` also prevents excessive repetition: `urlparser.Parse`.
