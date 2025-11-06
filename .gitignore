@@ -3,3 +3,6 @@
 .idea/
 .vscode/
 *.bkp
+**/cover.out
+**/mem.out
+**/*.benchmark
