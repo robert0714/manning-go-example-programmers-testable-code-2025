@@ -1,0 +1,90 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="intValueParser" id="0">
+    <mxGraphModel dx="888" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="intValueParser" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;container=0;" parent="1" vertex="1">
+          <mxGeometry x="319" y="160" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="intVariable" value="int variable" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" parent="1" vertex="1">
+          <mxGeometry x="609" y="180" width="100" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="readsArrow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="setMethod" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="514" y="280" as="sourcePoint" />
+            <mxPoint x="609" y="265" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="609" y="265" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-8" value="42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="readsArrow">
+          <mxGeometry x="-0.174" y="1" relative="1" as="geometry">
+            <mxPoint x="14" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="input1" value="Called when defining a flag and used in a usage message" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="30" y="210" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="input42" value="Called while parsing the flag" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="30" y="250" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1ToString" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;strokeColor=#000000;" parent="1" source="input1" target="stringMethod" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="220" />
+              <mxPoint x="280" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow42ToSet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;strokeColor=#000000;" parent="1" source="input42" target="setMethod" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-10" value="&quot;42&quot;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="arrow42ToSet">
+          <mxGeometry x="-0.0649" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="stringMethod" target="input1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="275" y="233" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-13" value="&quot;1&quot;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yzdB7kQeevxm7RqJus_s-12">
+          <mxGeometry x="0.0564" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stringMethod" value="&lt;b&gt;String&lt;/b&gt;() string" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;container=0;" parent="1" vertex="1">
+          <mxGeometry x="329" y="210" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="setMethod" value="&lt;b&gt;Set&lt;/b&gt;(s string) error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;container=0;" parent="1" vertex="1">
+          <mxGeometry x="329" y="250" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-1" value="intValue parser" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="364" y="180" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.006;entryY=0.331;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#212121;" edge="1" parent="1" source="stringMethod" target="intVariable">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="539" y="220" />
+              <mxPoint x="539" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-5" value="Reads" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="529" y="180" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-6" value="c := 1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="624" y="160" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yzdB7kQeevxm7RqJus_s-7" value="Write" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="529" y="270" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

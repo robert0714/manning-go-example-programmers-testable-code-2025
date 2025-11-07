@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Page-1" id="hit-tool-flow">
+    <mxGraphModel dx="1224" dy="724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="$ ./hit -url=https://go.dev -n=100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=middle;fontSize=12;fontFamily=Courier New;fontStyle=0;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.194;entryY=-0.002;entryDx=0;entryDy=0;strokeWidth=2;entryPerimeter=0;" parent="1" source="2" target="4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="80" as="sourcePoint" />
+            <mxPoint x="200" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4" value="HIT tool" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=top;fontSize=14;fontStyle=1;spacingLeft=10;spacingTop=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="120" width="700" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Go runtime" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;verticalAlign=middle;fontSize=12;fontStyle=0;dashed=1;dashPattern=5 5;" parent="1" vertex="1">
+          <mxGeometry x="60" y="170" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Sets" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="60" y="200" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="package os" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=top;fontSize=12;fontStyle=1;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="60" y="230" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="var &lt;b&gt;Args &lt;/b&gt;= &lt;b&gt;[]string&lt;/b&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp;&quot;hit&quot;, &quot;-url=...&quot;, &quot;-n=100&quot;,&lt;br&gt;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;align=left;verticalAlign=middle;fontSize=11;fontFamily=Courier New;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="70" y="258" width="220" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="7" target="10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="275" as="sourcePoint" />
+            <mxPoint x="400" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="package flag" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=top;fontSize=12;fontStyle=1;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="340" y="230" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Parses, validates,&lt;br&gt;and converts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="350" y="260" width="120" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="10" target="18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="275" as="sourcePoint" />
+            <mxPoint x="580" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="Sets the flags into variables" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="510" y="200" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=center;verticalAlign=top;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="515" y="230" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Flag" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="515" y="230" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Value" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="570" y="230" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Type" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="670" y="230" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="url" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="515" y="260" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="&quot;https://go.dev&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=10;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="570" y="260" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="string" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="670" y="260" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="n" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="515" y="290" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="100" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="570" y="290" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="int" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;align=center;verticalAlign=middle;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="670" y="290" width="55" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
