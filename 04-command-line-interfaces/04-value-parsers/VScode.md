@@ -83,5 +83,5 @@ In summary, `Flag` values have a `Value` field to handle any variable type via a
 >
 ### 4.4.2 Satisfying the Value interface
 ### 4.4.3 Using Var
-- [Listing 4.6: Parsing with `FlagSet`](../../all-listings/04-command-line-interfaces/06-parsing-with-flagset.md)
-- [Listing 4.7: Removing usage text](../../all-listings/04-command-line-interfaces/07-removing-usage-text.md)
+- [Listing 4.8: Satisfying `flag.Value`](../../all-listings/04-command-line-interfaces/08-satisfying-flagvalue.md)
+- [Listing 4.9: Using `FlagSet.Var`](../../all-listings/04-command-line-interfaces/09-using-flagsetvar.md)
