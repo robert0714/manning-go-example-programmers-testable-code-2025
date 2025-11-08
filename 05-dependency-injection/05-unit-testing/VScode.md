@@ -19,7 +19,7 @@
         ]
   }
   ```
-  * `${workspaceFolder}`: `04-command-line-interfaces\06-validation`
+  * `${workspaceFolder}`: `05-dependency-injection\05-unit-testing`
   * Install Delve (Go Debugger)
     ```bash
     go install github.com/go-delve/delve/cmd/dlv@latest
@@ -33,7 +33,19 @@
   ```bash
   rmdir /s /q "%GOROOT%\pkg"
   ```   
-# 4 Command-line interfaces 
-## 4.6 Validation
-- [Listing 4.11: Validator](../../all-listings/04-command-line-interfaces/11-validator.md)
-- [Listing 4.12: Integrating the validator](../../all-listings/04-command-line-interfaces/12-integrating-the-validator.md)
+# 5 Dependency injection 
+## 5.5 Unit testing
+- [Listing 5.8: Adding a shared test case type](../../all-listings/05-dependency-injection/08-adding-a-shared-test-case-type.md)
+- [Listing 5.9: Testing with valid flags](../../all-listings/05-dependency-injection/09-testing-with-valid-flags.md)
+  
+
+
+```bash
+$ go test ./hit/cmd/hit -run=TestParseArgs -v
+--- PASS: TestParseArgsValidInput
+   --- PASS: TestParseArgsValidInput/all_flags
+--- PASS: TestParseArgsInvalidInput
+    --- PASS: TestParseArgsInvalidInput/n_syntax
+    --- PASS: TestParseArgsInvalidInput/n_negative
+    --- PASS: TestParseArgsInvalidInput/n_zero
+```
