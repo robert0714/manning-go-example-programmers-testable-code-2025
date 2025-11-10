@@ -1,0 +1,76 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram id="g1" name="Page-1">
+    <mxGraphModel dx="888" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hVNGRpHiCWBRGZZtNn0l-3" value="&lt;b&gt;Handshake&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=#ffffff;fontSize=12;align=center;verticalAlign=top;dashed=1;dashPattern=1 4;" vertex="1" parent="1">
+          <mxGeometry x="300" y="49" width="196" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="caller" value="Caller" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#f0f0f0;fontSize=14;align=center;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="40" y="49" width="220" height="181" as="geometry" />
+        </mxCell>
+        <mxCell id="yield-func" value="func yield(Result) bool" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=#ffffff;fontSize=12;align=center;" parent="caller" vertex="1">
+          <mxGeometry x="12" y="38.462500000000006" width="196" height="119.91250000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="sendn" value="SendN(...) (Results, ...)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#E3E3E3;fontSize=13;align=center;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="532" y="49" width="210" height="181" as="geometry" />
+        </mxCell>
+        <mxCell id="results-iter" value="Results iterator" style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=default;fontSize=12;align=center;verticalAlign=top;" parent="sendn" vertex="1">
+          <mxGeometry x="11.2" y="33.9375" width="179.71" height="135.75" as="geometry" />
+        </mxCell>
+        <mxCell id="yield-1" value="yield(&lt;span style=&quot;background-color: rgb(255, 255, 102);&quot;&gt;Result&lt;/span&gt;)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#999999;fillColor=#f9f9f9;fontSize=11;align=center;" parent="sendn" vertex="1">
+          <mxGeometry x="25.2" y="92.395875" width="154.8" height="23.2698125" as="geometry" />
+        </mxCell>
+        <mxCell id="yield-2" value="yield(&lt;span style=&quot;background-color: rgb(255, 255, 102);&quot;&gt;Result&lt;/span&gt;)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#999999;fillColor=#f9f9f9;fontSize=11;align=center;" parent="sendn" vertex="1">
+          <mxGeometry x="26" y="122.14" width="156" height="23.27" as="geometry" />
+        </mxCell>
+        <mxCell id="yield-3" value="..." style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;fontSize=11;align=center;" parent="sendn" vertex="1">
+          <mxGeometry x="25.2" y="144.5531875" width="144.8" height="21.8218125" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Passes yield(..)&lt;/font&gt;&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#333333;fontSize=12;" parent="1" edge="1">
+          <mxGeometry x="0.0309" relative="1" as="geometry">
+            <mxPoint x="252" y="114" as="sourcePoint" />
+            <mxPoint x="543.1999999999998" y="116" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="252" y="116" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVNGRpHiCWBRGZZtNn0l-5" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Returns Results&lt;/b&gt;&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#333333;fontSize=12;exitX=0.013;exitY=0.048;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="results-iter">
+          <mxGeometry x="-0.0116" relative="1" as="geometry">
+            <mxPoint x="539" y="88" as="sourcePoint" />
+            <mxPoint x="260" y="88" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="89" />
+              <mxPoint x="540" y="88" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVNGRpHiCWBRGZZtNn0l-8" value="Pushes the Result values" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#333333;fontSize=12;" edge="1" parent="1">
+          <mxGeometry x="0.0066" y="2" relative="1" as="geometry">
+            <mxPoint x="555" y="153" as="sourcePoint" />
+            <mxPoint x="250" y="155" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="555" y="155" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVNGRpHiCWBRGZZtNn0l-9" value="Pushes the Result values" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#333333;fontSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="yield-2">
+          <mxGeometry x="0.0013" relative="1" as="geometry">
+            <mxPoint x="549" y="185" as="sourcePoint" />
+            <mxPoint x="249" y="183" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="550" y="185" />
+              <mxPoint x="550" y="183" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
