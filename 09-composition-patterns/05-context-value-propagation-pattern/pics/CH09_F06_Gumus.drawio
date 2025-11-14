@@ -1,0 +1,54 @@
+<mxfile host="65bd71144e">
+    <diagram id="page-1" name="Page-1">
+        <mxGraphModel dx="572" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="*slog.Logger" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontSize=14;align=center;verticalAlign=top;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="50" width="170" height="156" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Handler" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=#f2f2f2;fontSize=12;align=center;verticalAlign=top;" parent="2" vertex="1">
+                    <mxGeometry x="13.607727272727272" y="40.93828571428571" width="142.7768181818182" height="100.776" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="traceid.&lt;br&gt;LogHandler" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1e66b4;dashed=1;dashPattern=1 4;fillColor=#eaf4ff;fontSize=11;align=center;verticalAlign=middle;" parent="3" vertex="1">
+                    <mxGeometry x="30" y="29.39485714285714" width="85.91" height="48.60514285714286" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="traceid.&lt;br&gt;LogHandler" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1e66b4;fillColor=#dfecff;fontSize=12;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="121.94" width="90" height="48.06" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="slog.&lt;br&gt;TextHandler" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="121.94" width="90" height="48.06" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="rounded=0;endArrow=block;strokeColor=#333333;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;strokeColor=#333333;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="rounded=0;dashPattern=2 2;endArrow=none;strokeColor=#999999;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Context" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2D7600;fillColor=#60a917;fontSize=14;align=center;verticalAlign=top;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="50" width="90" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Trace ID&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#333333;fillColor=light-dark(#c8f0c8, #1d1d1d);fontSize=12;align=center;verticalAlign=top;" vertex="1" parent="11">
+                    <mxGeometry x="6.23" y="21.851851851851855" width="77.54" height="21.666666666666668" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="14" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;b&gt;Logger.&lt;/b&gt;&lt;div&gt;&lt;b&gt;LogAttrs(ctx, ...)&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry y="126.97" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;b&gt;Logs with:&lt;br&gt;...trace_id=42&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="191.70999999999998" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;b&gt;Extracts a trace ID&lt;br&gt;from the Context and&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;adds a trace_id slog.Attr&amp;nbsp;&lt;br&gt;to the slog.Record&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="305" y="180" width="160" height="78.29" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

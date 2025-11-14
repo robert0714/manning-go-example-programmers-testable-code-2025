@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="page-1" name="Page-1">
+        <mxGraphModel dx="1062" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="5" target="r1VvgCld_v7MzmWK1VKM-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Handler" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="30" width="50" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="r1VvgCld_v7MzmWK1VKM-7" target="r1VvgCld_v7MzmWK1VKM-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-7" value="Request" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="46" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-8" value="Logger middleware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="32" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endArrow=block;endFill=1;" parent="1" source="r1VvgCld_v7MzmWK1VKM-10" target="r1VvgCld_v7MzmWK1VKM-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-18" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="240" y="11" width="374" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="r1VvgCld_v7MzmWK1VKM-18" vertex="1">
+                    <mxGeometry width="374" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="r1VvgCld_v7MzmWK1VKM-18" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="r1VvgCld_v7MzmWK1VKM-18" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="RecordResponse" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1f78b4;fillColor=#bfe3ff;glass=0;" parent="r1VvgCld_v7MzmWK1VKM-18" vertex="1">
+                    <mxGeometry x="116" y="19" width="109" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Duration middleware" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;" parent="r1VvgCld_v7MzmWK1VKM-18" vertex="1">
+                    <mxGeometry x="260" y="19" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="r1VvgCld_v7MzmWK1VKM-18" source="r1VvgCld_v7MzmWK1VKM-10" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-10" value="Response" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="r1VvgCld_v7MzmWK1VKM-18" vertex="1">
+                    <mxGeometry x="10" y="47" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-19" value="Logs 9μs" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-20" value="Finishes in&amp;nbsp; 9μs (e.g.)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="108" width="60" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-21" value="Stores response metrics" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="255" y="113" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-22" value="Helper to run middleware and return a Response" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="374" y="121" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1VvgCld_v7MzmWK1VKM-23" value="Middleware&amp;nbsp; to calculate response durations" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="518" y="122" width="80" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

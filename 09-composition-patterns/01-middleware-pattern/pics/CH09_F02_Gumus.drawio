@@ -1,0 +1,92 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram id="diagram1" name="Page-1">
+    <mxGraphModel dx="1062" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="req" value="Requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9EAD3;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="58.5" y="128" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="server" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;*http.Server&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAD1DC;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="171" y="125.5" width="120" height="27.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mwGroup" value="Middleware handler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#000000;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="320" y="95" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mwServe" value="ServeHTTP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="mwGroup" vertex="1">
+          <mxGeometry x="17.801333333333332" y="34.95145631067962" width="93.99866666666667" height="17.47572815533981" as="geometry" />
+        </mxCell>
+        <mxCell id="mwLog" value="Log(..)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="mwGroup" vertex="1">
+          <mxGeometry x="17.333333333333336" y="61.16504854368933" width="95.33333333333334" height="17.47572815533981" as="geometry" />
+        </mxCell>
+        <mxCell id="mux" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;*http.ServeMux&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E2EFDA;strokeColor=#000000;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="480" y="94.5" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="muxServe" value="ServeHTTP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" parent="mux" vertex="1">
+          <mxGeometry x="22.641666666666662" y="36" width="89.375" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="epShorten" value="Shorten" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="640" y="136.5" width="80" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="epResolve" value="Resolve" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="640" y="110.5" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="epHealth" value="Health" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="640" y="160.5" width="80" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="req" target="server" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="server" target="mwServe" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mwServe" target="mux" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeShorten" style="rounded=0;endArrow=block;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="muxServe" target="epShorten" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeResolve" style="rounded=0;endArrow=block;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="muxServe" target="epResolve" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeHealth" style="rounded=0;endArrow=block;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="muxServe" target="epHealth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_Lz9kmi04Wku77RLUFq-3" value="Requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9EAD3;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="53" y="133" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="d_Lz9kmi04Wku77RLUFq-4" value="Requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9EAD3;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="49" y="137" width="80" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="d_Lz9kmi04Wku77RLUFq-5" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="242" as="sourcePoint" />
+            <mxPoint x="380" y="176" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="242" />
+              <mxPoint x="370" y="212" />
+              <mxPoint x="390" y="192" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d_Lz9kmi04Wku77RLUFq-6" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="240" as="sourcePoint" />
+            <mxPoint x="542.1500000000001" y="162.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="230" />
+              <mxPoint x="530" y="210" />
+              <mxPoint x="559" y="196" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d_Lz9kmi04Wku77RLUFq-7" value="Logs after calling ServerMux.ServerHTTP" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="324" y="244" width="131" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="d_Lz9kmi04Wku77RLUFq-8" value="Router" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="240" width="54" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

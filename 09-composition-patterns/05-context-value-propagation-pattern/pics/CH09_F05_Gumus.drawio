@@ -1,0 +1,113 @@
+<mxfile host="65bd71144e">
+    <diagram id="context-prop" name="Context Propagation">
+        <mxGraphModel dx="829" dy="851" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="640" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="r1" value="Incoming *Request" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontSize=12;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="55" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1c" value="Context" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=#FFFFFF;fontSize=12;align=center;" parent="r1" vertex="1">
+                    <mxGeometry x="15.55076923076923" y="39" width="108.8876923076923" height="68.18181818181817" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="190" y="17" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;traceid.Middleware&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=12;align=center;verticalAlign=top;container=0;fontColor=#333333;" vertex="1" parent="6">
+                    <mxGeometry width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="panel1" value="Cloned *Request" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontSize=12;align=center;verticalAlign=top;" parent="6" vertex="1">
+                    <mxGeometry x="20" y="35" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1ctx" value="Context" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2E8B57;fillColor=#C7F0D8;fontSize=12;align=center;verticalAlign=top;" parent="panel1" vertex="1">
+                    <mxGeometry x="15.166666666666666" y="42.5" width="109.66666666666667" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1trace" value="Trace ID" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2E8B57;fillColor=#FFFFFF;fontSize=11;align=center;" parent="p1ctx" vertex="1">
+                    <mxGeometry x="22.33" y="24.857142857142854" width="65" height="25.285714285714285" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="410" y="17" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: nowrap;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;hlog.Middleware&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=12;align=center;verticalAlign=top;container=0;fontColor=#333333;" vertex="1" parent="7">
+                    <mxGeometry width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Cloned *Request" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontSize=12;align=center;verticalAlign=top;" vertex="1" parent="7">
+                    <mxGeometry x="20" y="35" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Context" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2E8B57;fillColor=#C7F0D8;fontSize=12;align=center;verticalAlign=top;" vertex="1" parent="9">
+                    <mxGeometry x="15.166666666666666" y="42.5" width="109.66666666666667" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Trace ID" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2E8B57;fillColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="10">
+                    <mxGeometry x="22.33" y="24.857142857142854" width="65" height="25.285714285714285" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="633" y="17" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: nowrap;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Shorten(..)&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=12;align=center;verticalAlign=top;container=0;fontColor=#333333;" vertex="1" parent="12">
+                    <mxGeometry width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Cloned *Request" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontSize=12;align=center;verticalAlign=top;" vertex="1" parent="12">
+                    <mxGeometry x="20" y="35" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Context" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2E8B57;fillColor=#C7F0D8;fontSize=12;align=center;verticalAlign=top;" vertex="1" parent="14">
+                    <mxGeometry x="15.166666666666666" y="42.5" width="109.66666666666667" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Trace ID" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2E8B57;fillColor=#FFFFFF;fontSize=11;align=center;" vertex="1" parent="15">
+                    <mxGeometry x="22.33" y="24.857142857142854" width="65" height="25.285714285714285" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;" parent="1" source="10" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="570" y="127" as="sourcePoint"/>
+                        <mxPoint x="670" y="127" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;...&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" vertex="1" connectable="0" parent="e2">
+                    <mxGeometry x="0.0006" y="1" relative="1" as="geometry">
+                        <mxPoint x="-5" y="8" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e1" style="rounded=0;orthogonalLoop=1;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="p1ctx" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="137" as="sourcePoint"/>
+                        <mxPoint x="450" y="137" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" style="rounded=0;orthogonalLoop=1;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="r1c" target="p1ctx">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="110" y="127" as="sourcePoint"/>
+                        <mxPoint x="220" y="127" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Request has a Context.&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="250" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="curved=1;endArrow=classic;html=1;exitX=0.43;exitY=0.11;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="26">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="250" as="sourcePoint"/>
+                        <mxPoint x="280" y="187" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="310" y="237"/>
+                            <mxPoint x="290" y="220"/>
+                            <mxPoint x="260" y="227"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="" style="curved=1;endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="21">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="80" y="266" as="sourcePoint"/>
+                        <mxPoint x="80" y="176" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="100" y="236"/>
+                            <mxPoint x="80" y="226"/>
+                            <mxPoint x="50" y="226"/>
+                            <mxPoint x="60" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Forwards a cloned request with a traceID in its Context&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="250" width="210" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
