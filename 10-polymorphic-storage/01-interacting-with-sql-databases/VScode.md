@@ -95,6 +95,21 @@ This driver is more performant and feature-rich than what we’re using, but it 
 ```bash
 $ CGO_ENABLED=1 go build
 ```
+* Windows CMD
+  ```bash
+  set CGO_ENABLED=1
+  go build ./link/cmd/linkd
+  ```
+* Windows PowerShell
+  ```bash
+  $env:CGO_ENABLED=1
+  go build ./link/cmd/linkd
+  ```
+* Git Bash / Mingw / MSYS2
+  ```bash
+  $ CGO_ENABLED=1 go build
+  ```
+
 Enabling CGO complicates cross-compilation, slows builds, and introduces external dependencies. It’s best to use CGO when we don’t have any other choice or when its advantages significantly outweigh its overhead and complexity. Pick your poison carefully.
 
 > [!NOTE]
