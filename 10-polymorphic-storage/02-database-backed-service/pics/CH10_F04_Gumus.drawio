@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram id="architecture" name="Link Services Architecture">
+    <mxGraphModel dx="1544" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="link-services" value="Link services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="210" y="30" width="321" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="database-sql" value="database/sql" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="563" y="60" width="150" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="DB" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="578" y="91" width="120" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="http-requests" value="HTTP&#xa;Requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ADD8E6;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="60" y="123" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="link-sqlite" value="link/sqlite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0E68C;fontSize=11;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="374.5" y="62" width="141" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="link-rest" value="link/rest" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ADD8E6;fontSize=11;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="229" y="60" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="http-handlers-label" value="HTTP handlers" style="text;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="254" y="101" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="shorten-rest" value="Shorten" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFACD;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="251" y="127" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="resolve-rest" value="Resolve" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFACD;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="250" y="170" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="exec-context" value="ExecContext" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFACD;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="589" y="126" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="query-row-context" value="QueryRowContext" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFACD;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="590" y="167" width="100" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="rest-to-shorten-rest" style="exitX=1;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="http-requests" target="shorten-rest" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rest-to-resolve-rest" style="exitX=1;exitY=0.75;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="http-requests" target="resolve-rest" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="exec-context-to-db" style="exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=31.75;entryPerimeter=0;" parent="1" source="exec-context" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="query-row-context-to-db" style="exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.007;entryY=0.748;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="query-row-context" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;SQLite&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFFFE0;" parent="1" vertex="1">
+          <mxGeometry x="751" y="110" width="70" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="bOxaUyhbZl9TvraNrRP6-4" value="Shortener" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="385" y="88" width="120" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="resolve-sqlite" value="Resolve" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFACD;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="405" y="171" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="shorten-sqlite" value="Shorten" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFACD;fontSize=10" parent="1" vertex="1">
+          <mxGeometry x="405" y="126" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="resolve-rest-to-resolve-sqlite" style="endArrow=none;endFill=0;" parent="1" source="resolve-rest" target="resolve-sqlite" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shorten-rest-to-shorten-sqlite" style="endArrow=none;endFill=0;" parent="1" source="shorten-rest" target="shorten-sqlite" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bOxaUyhbZl9TvraNrRP6-6" value="HTTP&#xa;Requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ADD8E6;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="54" y="128" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bOxaUyhbZl9TvraNrRP6-7" value="HTTP&#xa;Requests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ADD8E6;fontSize=12;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="46" y="134" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="shorten-sqlite-to-db" style="endArrow=none;endFill=0;" parent="1" source="shorten-sqlite" target="exec-context" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="resolve-sqlite-to-db" style="endArrow=none;endFill=0;" parent="1" source="resolve-sqlite" target="query-row-context" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
