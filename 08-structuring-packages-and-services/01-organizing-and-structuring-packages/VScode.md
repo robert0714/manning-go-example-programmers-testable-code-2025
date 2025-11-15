@@ -67,7 +67,8 @@ link  #1
 
 This structure prevents import cycles by maintaining explicit dependencies. The `link` package provides core link management services without depending on our other packages. The `link/rest` package builds on top of the link package and provides a REST API over HTTP. Finally, the `linkd` command (`main` package) wires all packages to run an HTTP server that serves our REST API.
 
-> [!TIP] DEEP DIVE: THE INTERNAL DIRECTORY CONVENTION
+> [!IMPORTANT]
+> DEEP DIVE: THE INTERNAL DIRECTORY CONVENTION    
 > Go has a special directory called `internal` that restricts package imports. Suppose that our directory structure looked like this:
 > ```bash
 > svc

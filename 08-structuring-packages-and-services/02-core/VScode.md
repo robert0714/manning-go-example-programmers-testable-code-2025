@@ -42,7 +42,8 @@
 > Although we provide a `link.Shortener` service, extra services we could provide later could also fit into our package structure. Imagine a `link.Analytics` service that provides link statistics. Its core logic could go into the `link` package, the REST API into `rest`, and persistence into `sqlite`. Rather than creating new packages, using the existing structure can help us avoid import cycles and provide a nice structure for expanding the project. See https://github.com/inancgumus/gobyexample/blob/source/link/analytics.go . 
 ### 8.2.1 Errors
 - [Listing 8.1: Standardized errors](../../all-listings/08-structuring-packages-and-services/01-standardized-errors.md)
-> [!TIP] DEEP DIVE: SATISFYING THE ERROR INTERFACE
+> [!IMPORTANT]
+> DEEP DIVE: SATISFYING THE ERROR INTERFACE   
 > Using error variables (e.g., `ErrNotFound`) is enough for our project because we would map them only to HTTP status codes. If we need extra context, it might be helpful to declare custom error types that satisfy the `error` interface, adding extra behavior and data. The following `NotFoundError` satisfies `error`, letting us store an `ID`. Naming it with an `Error` suffix is idiomatic, clarifying that it implements the `error` interface:
 > ```golang
 > type NotFoundError struct{ ID string }
@@ -108,7 +109,8 @@
 > [!TIP] 
 > Design the types so that their zero value is useful. If forcing a zero value to be useful adds complexity, however, it might be better to use a constructor.
 
-> [!TIP] DIFFERENT WAYS OF INITIALIZING A MAP
+> [!IMPORTANT]
+> DIFFERENT WAYS OF INITIALIZING A MAP    
 > There are two ways to initialize a map:
 > * With a map literal—`map[Key]Link{}`
 > * With the built-in make function—`make(map[Key]Link)`
@@ -144,7 +146,8 @@ A goroutine that locks a mutex blocks others by saying, in essence, “Wait unti
   
 Put simply, `RWMutex` allows multiple goroutines to read a shared state concurrently. It blocks others only when a write operation is in progress. Because we expect more reads than writes in our project, we’ll go with the `RWMutex` type for efficiency reasons.
 
-> [!NOTE] DEEP DIVE: MUTEX VS. RWMUTEX
+> [!IMPORTANT]
+> DEEP DIVE: MUTEX VS. RWMUTEX     
 >  `Mutex` might be more useful if reads and writes are balanced or if writes are more frequent. If reads are more frequent, however, `RWMutex` can improve throughput. Its benefits diminish if the write operations are frequent or long-running because readers can starve. Although `RWMutex` might improve performance in read-heavy cases, it’s worth benchmarking both mutex types to see which one provides the best efficiency for a specific case.
 ##### MUTEXES IN PRACTICE
 - [Listing 8.7: `RWMutex` protection](../../all-listings/08-structuring-packages-and-services/07-rwmutex-protection.md)

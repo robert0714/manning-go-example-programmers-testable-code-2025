@@ -155,7 +155,8 @@ We’ve returned a new `LogHandler` from each method, wrapping the original Hand
 
 `LogHandler` integrates with existing `slog` handlers without altering their core logic. It’s like middleware for log handlers. Combining it with the trace ID middleware allows us to generate, propagate, and log trace IDs consistently throughout our program.
 
-> [!TIP]DEEP DIVE: PERFORMANCE CONCERNS
+> [!IMPORTANT]
+> DEEP DIVE: PERFORMANCE CONCERNS    
 > Our L`ogHandler.Handle` clones the `slog.Record` on each `slog.Logger` method call, allocating a new slice underneath. This extra allocation usually doesn’t affect most servers (like ours) because I/O tends to dominate, but it can slow down others. For more details on performance, see the `slog` documentation at https://pkg.go.dev/log/slog and https://mng.bz/X71v.
 
 ### 9.5.6 Integration

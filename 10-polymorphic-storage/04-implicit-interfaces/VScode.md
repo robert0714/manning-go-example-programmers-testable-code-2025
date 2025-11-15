@@ -63,7 +63,8 @@ Also, by declaring only essential methods, these small interfaces reduce complex
 
 The consumer-driven interface approach aligns well with Go’s core principles, emphasizing simplicity. This approach promotes decoupling, better testability, and ease of maintenance.
 
-> [!TIP] DEEP DIVE: CENTRALIZING WIDELY USED BEHAVIORS
+> [!IMPORTANT]
+> DEEP DIVE: CENTRALIZING WIDELY USED BEHAVIORS   
 > Declaring interfaces on the consumer side helps prevent unnecessary speculation. Consumers define only the behaviors they need, keeping interfaces minimal and relevant. Sometimes, however, multiple consumers need the same behavior. `json`, `xml`, and similar packages have functions to convert arbitrary types to text, for example. Rather than having each consumer package declare its own interface, we may find it more effective to centralize such common behaviors in a single package after they’ve emerged. The encoding package, for example, has a widely used TextMarshaler interface:
 > ```golang
 > package encoding

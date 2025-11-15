@@ -40,7 +40,8 @@ On each iteration, we call the Run method to run a subtest. Each subtest gets a 
 
 See [codes](../05-subtests/url/url_test.go#L95C1-L109C1). 
 
-> [!NOTE]DEFINITION 
+> [!IMPORTANT]
+> DEFINITION   
 > `Closures` are functions that retain access to their surrounding scope, such as variables, even after their outer function returns.
 
 > [!NOTE] 
@@ -52,7 +53,8 @@ See [codes](../05-subtests/url/url_test.go#L95C1-L109C1).
 > [!NOTE]WARNING 
 > Each `*T` is specific to a test function, making the test function independent. Never share a test function’s `*T` with another test function (including subtests). Doing so could lead to unpredictable behavior and compromise the validity of overall test results.
 
-> [!TIP] DEEP DIVE: CLOSURES AND MEMORY MANAGEMENT
+> [!IMPORTANT]
+> DEEP DIVE: CLOSURES AND MEMORY MANAGEMENT   
 > `Closures` are functions that can capture and hold pointers to variables from their surrounding scope even after their outer function returns. This means they can extend the lifetime of these variables beyond the function that created them. The garbage collector cannot reclaim memory for variables still referenced by actively referenced closures. If we keep closures around too long or share them improperly, we risk memory leaks, so we should be extra careful when sharing closures with other parts of our programs.
 
 

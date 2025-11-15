@@ -67,7 +67,8 @@ The returned `*DB` manages a connection pool that simplifies database operations
 
 `DB` is a concrete type offering polymorphism through the `driver` interfaces without being an interface type itself. This approach allows the `DB` type to provide new features without breaking existing code. See the following sidebar for details on the driver pattern.
 
-> [!TIP]DEEP DIVE: THE DRIVER DESIGN PATTERN
+> [!IMPORTANT]
+> DEEP DIVE: THE DRIVER DESIGN PATTERN   
 > The `sql` package has an approach that uses drivers to abstract databases. Let’s explore how this approach works by examining the driver pattern, illustrated in the following figure. `DB` interacts with databases indirectly through the `sql/driver` interfaces. Drivers communicate directly with their specific database technologies to carry out our SQL queries.
 
 ![A close-up of a computer screen  AI-generated content may be incorrect.](pics/CH10_UN01_Gumus.drawio.svg)  
@@ -106,7 +107,8 @@ Now that we’ve downloaded the driver, we must register it in the `sql` package
 Our `sqlite` package has the same name as the `sqlite` driver package but is separate, and sharing names doesn’t lead to conflicts because the import paths are different. Naming our package `sqlite` lets us use it as an entry point and isolation layer for the rest of our packages, providing SQLite interaction through a single package without scattering SQL-specifics to the rest of our code, improving maintainability. It also helps later to have nice-to-read services such as `sqlite.Shortener`, a `Shortener` backed by SQLite.
 
 The underscore in the `import` tells the compiler we won’t use the driver package name `sqlite` in this `sqlite.go` file, but it still allows us to register the driver. This importing use is known as a `blank` or `side-effect import`. If we skip the blank import, we see an “imported and not used” error, or our text editor removes the import, skipping driver registration.
-> [!NOTE]DEEP DIVE: BLANK IMPORTS AND INIT()
+> [!IMPORTANT]
+> DEEP DIVE: BLANK IMPORTS AND INIT()   
 > When we import a package, it executes any init functions declared in the package once. (Importing a package multiple times, for example, calls its init functions only once.) Drivers contain at least one init function, enabling them to register themselves automatically within the sql package’s registry. Here’s the SQLite driver’s init function:
 > ```golang
 > package sqlite #1
@@ -165,7 +167,7 @@ Figure 10.2 shows how to connect to SQLite. We use the following functionality:
 * `DB.PingContext` connects to the database, adding the pool’s first connection.
 
 
-![architecture diagram](pics/CH10_F02_Gumus.drawio.svg)
+![architecture diagram](pics/CH10_F02_Gumus.drawio.svg)   
 Figure 10.2 Connecting to the SQLite database using Open and PingContext
 
 Although `Open` may return an empty pool, `PingContext` adds the first connection if successful. Behind the scenes, `Open` starts a goroutine that listens for new connection requests. `PingContext` tells this goroutine to connect to the database and put the connection in the pool for reuse. Because `*DB` has a connection pool, we must maintain `*DB` throughout our program’s life cycle to avoid reconnecting to the same database for every query we send.
@@ -177,7 +179,8 @@ Now that we know how to open a connection pool and establish a connection, we’
 - [Listing 10.2: Dialing the database](../../all-listings/10-polymorphic-storage/02-dialing-the-database.md)
 
 Now we can connect to SQLite using `Dial`, but we can’t insert a record into the database or query records from it. For those tasks, we need to define an SQL schema by running a query on the database that will create a table for storing links in the database.
-> [!TIP]DEEP DIVE: OPTIMIZING THE CONNECTION POOL
+> [!IMPORTANT]
+> DEEP DIVE: OPTIMIZING THE CONNECTION POOL    
 > DB allows us to fine-tune its connection pool’s behavior for optimal performance. The pool contains idle and in-use connections and uses an idle connection when executing a database task. If no idle connection is available, it establishes a new connection to the database and use that connection to carry on that task.
 > 
 > The `SetMaxOpenConns` and `SetMaxIdleConns` methods determine the maximum number of active and idle connections allowed in the pool. `SetConnMaxLifetime` and `SetConnMax­IdleTime` determine how long a connection remains reusable and idle.
@@ -212,7 +215,8 @@ ExecContext(ctx context.Context, query string, args ...any) (Result, error)
 > [!NOTE] 
 > Learn more about file embedding at https://pkg.go.dev/embed.
 
-> [!NOTE]DEEP DIVE: MIGRATIONS
+> [!IMPORTANT]
+> DEEP DIVE: MIGRATIONS    
 > Although it’s fine in our case, running the schema while connecting to a database can be wasteful if we have a large number of SQL queries in the schema to execute. In such a case, we can use a tool crafted explicitly for this purpose, such as the golang-migrate tool. Instead of running it each time we connect to the database, we can migrate the schema only once.
 > 
 > Another way is to use the `embed.FS` type to build our schema migration solution. The compiler can embed the SQL files from the `schema` directory in the final binary with the following directive, after which we can access each via the `schemaFiles` variable:
