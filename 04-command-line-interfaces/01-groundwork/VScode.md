@@ -11,7 +11,7 @@
             "type": "go",
             "request": "launch",
             "mode": "debug",
-            "program": "${workspaceFolder}/url/cmd", 
+            "program": "${workspaceFolder}/hit/cmd/hit", 
             "cwd": "${workspaceFolder}",
             "env": {},
             "args": []
